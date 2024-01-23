@@ -3,11 +3,13 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 
-def scrape_content(url_pattern, tag, attr, attr_value, pages):
+def scrape_content(base_url, tag, attr, attr_value, pages):
     contents = []
 
     for page in range(1, pages + 1):
-        page_url = url_pattern.replace("{page}", str(page))
+        page_url = f"{base_url.rstrip('/').rsplit('/', 1)[0]}/{page}/"
+        print(f"Przetwarzanie strony: {page_url}")
+
         try:
             response = requests.get(page_url, timeout=5)
             if response.status_code != 200:
@@ -22,6 +24,8 @@ def scrape_content(url_pattern, tag, attr, attr_value, pages):
 
             for element in elements:
                 contents.append(element.get_text(strip=True))
+
+            print("Pierwsze elementy na stronie:", contents[-5:])
 
         except requests.RequestException as e:
             print(f"Błąd podczas łączenia ze stroną: {page_url} - {e}")
@@ -39,14 +43,15 @@ def save_to_csv(contents, filename):
         for content in contents:
             writer.writerow([content])
 
-url_pattern = input("Podaj wzorzec URL (z '{page}' jako zastępnik numeru strony, np. 'https://example.com/page/{page}'): ")
+
+base_url = input("Podaj URL pierwszej strony (np. 'https://tezeusz.pl/blog/motywy/strona/1/'): ")
 tag = input("Podaj tag HTML (np. 'h2', 'div'): ")
 attr = input("Podaj atrybut HTML (opcjonalnie, np. 'class', ENTER - skip): ")
 attr_value = input("Podaj wartość atrybutu (opcjonalnie, ENTER - skip): ")
 pages = int(input("Podaj liczbę stron do przeszukania: "))
 filename = input("Podaj nazwę pliku CSV: ")
 
-contents = scrape_content(url_pattern, tag, attr, attr_value, pages)
+contents = scrape_content(base_url, tag, attr, attr_value, pages)
 save_to_csv(contents, filename)
 
 print(f"Zakończono zapisywanie treści do folderu 'outputs' w pliku {filename}")
