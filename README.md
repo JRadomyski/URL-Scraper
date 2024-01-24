@@ -3,7 +3,7 @@
 Ten projekt zawiera skrypt Pythona do scrapowania stron internetowych, umożliwiający użytkownikom ekstrakcję treści z dowolnych stron internetowych z wykorzystaniem niestandardowych wzorców URL i tagów HTML.
 
 ## urlcrawler.exe -> [pobierz](https://github.com/JRadomyski/URL-Scraper/blob/main/dist/url_scraper.exe)
-Następnie klinkij `ctrl` + `shift` + `s` albo zrób to ręcznie
+Następnie kliknij `ctrl` + `shift` + `s` albo zrób to ręcznie
 
 ### Krok 1: Wejdź do katalogu `dist`
 ![dist](readme_assets/dist.png)
