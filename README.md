@@ -4,9 +4,6 @@ Ten projekt zawiera skrypt Pythona do scrapowania stron internetowych, umożliwi
 
 ## urlcrawler.exe -> [pobierz](https://github.com/JRadomyski/URL-Crawler/blob/main/exe/main.exe)
 
-
-
-
 ### Jeśli napotkasz problemy podczas zapisu danych do pliku, sprawdź:
 
 1. Czy folder `outputs` istnieje i czy masz do niego odpowiednie uprawnienia.
