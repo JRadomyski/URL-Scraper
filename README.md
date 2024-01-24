@@ -8,15 +8,15 @@ Następnie kliknij `ctrl` + `shift` + `s` albo zrób to ręcznie
 ### Krok 1: Wejdź do katalogu `dist`
 ![dist](readme_assets/dist.png)
 ### Krok 2: Pobierz plik exe
-![dist](readme_assets/exe.png)
+![exe](readme_assets/exe.png)
 ### Krok 3: Omiń defendera - wejdź w `więcej informacji`, a następnie `uruchom mimo to`
-![dist](readme_assets/defender.png)
-![dist](readme_assets/defender2.png)
+![def](readme_assets/defender.png)
+![def2](readme_assets/defender2.png)
 ### Krok 4: Postępuj zgodnie z instrukcją
-![dist](readme_assets/exe2.png)
-![dist](readme_assets/exe3.png)
+![exe2](readme_assets/exe2.png)
+![exe3](readme_assets/exe3.png)
 ### Krok 5: w folderze `outputs` zapisane są wyniki scrapeowania
-![dist](readme_assets/output.png)
+![output](readme_assets/output.png)
 ### Jeśli napotkasz problemy podczas zapisu danych do pliku, sprawdź:
 
 1. Czy folder `outputs` istnieje i czy masz do niego odpowiednie uprawnienia.
